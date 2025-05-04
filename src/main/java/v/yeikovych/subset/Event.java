@@ -3,6 +3,7 @@ package v.yeikovych.subset;
 import v.yeikovych.dynamic.Member;
 
 import java.time.LocalDateTime;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
@@ -123,7 +124,7 @@ public class Event {
     }
 
     public Set<Member> getRegisteredMembers() {
-        return new HashSet<>(registeredMembers);
+        return Collections.unmodifiableSet(registeredMembers);
     }
 
     @Override

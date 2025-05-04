@@ -24,7 +24,6 @@ public class Book implements Extent {
 
     // history
     private List<Loan> loanHistory = new ArrayList<>();
-    // ordered
     private List<Reservation> reservations = new ArrayList<>();
 
     private static List<Book> extent = new ArrayList<>();
@@ -127,6 +126,7 @@ public class Book implements Extent {
         return Collections.unmodifiableList(extent);
     }
 
+    // ordered
     public void addReservation(Reservation reservation) {
         throwIfNull(reservation, "Reservation cannot be null");
 

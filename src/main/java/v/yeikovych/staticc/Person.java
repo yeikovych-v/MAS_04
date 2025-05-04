@@ -11,7 +11,7 @@ import java.util.Objects;
 
 import static v.yeikovych.util.ValidationUtils.*;
 
-public class Person implements Extent {
+public abstract class Person implements Extent {
     private String firstName;
     private String lastName;
     // static
@@ -23,7 +23,7 @@ public class Person implements Extent {
 
     private static List<Person> extent = new ArrayList<>();
 
-    public Person(String firstName, String lastName, LocalDate dateOfBirth, String email, String phoneNumber) {
+    protected Person(String firstName, String lastName, LocalDate dateOfBirth, String email, String phoneNumber) {
         setFirstName(firstName);
         setLastName(lastName);
         setDateOfBirth(dateOfBirth);

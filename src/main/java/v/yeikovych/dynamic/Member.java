@@ -23,6 +23,7 @@ public class Member extends Person {
 
     // ordered
     private List<Loan> loans = new ArrayList<>();
+    // ordered
     private List<Reservation> reservations = new ArrayList<>();
 
     private Set<Event> registeredEvents = new HashSet<>();
